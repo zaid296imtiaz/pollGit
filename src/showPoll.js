@@ -50,7 +50,7 @@ class showPoll extends Component {
 
     Display(props) {
 
-        if (this.state.op3 === undefined && this.state.op4 !== undefined) {
+        if (this.state.op3 === '' && this.state.op4 !== '') {
             this.hideClass2 = 'none';
             this.setState({
                 qId: this.props.location.state.tkey,
@@ -66,7 +66,7 @@ class showPoll extends Component {
                 op4Votes: this.props.location.state.op4Votes,
             })
         }
-        else if (this.state.op4 === undefined && this.state.op3 !== undefined) {
+        else if (this.state.op4 === '' && this.state.op3 !== '') {
             this.hideClass2 = 'none';
             this.setState({
                 qId: this.props.location.state.tkey,
@@ -82,7 +82,7 @@ class showPoll extends Component {
                 op4Votes: this.props.location.state.op4Votes,
             })
         }
-        else if (this.state.op3 === undefined && this.state.op4 === undefined) {
+        else if (this.state.op3 === '' && this.state.op4 === '') {
             this.hideClass = 'none';
             this.hideClass2 = 'none';
             this.setState({

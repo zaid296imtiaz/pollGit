@@ -24,33 +24,37 @@ class editPoll extends Component {
     }
     
     upp() {
-        if (this.quesIn.value === '' || this.op1In.value === '' || this.op2In.value === '' || this.nameIn.value === '') {
+        if (this.quesIn.value === undefined || this.op1In.value === undefined || this.op2In.value === undefined || this.nameIn.value === undefined) {
             alert('Please enter required fields')
         }
-        else if(this.op3In.value === '' && this.op4In.value !== ''){
+        else if(this.op3In.value === undefined && this.op4In.value !== undefined){
             var polls = {
                 name: this.nameIn.value,
                 ques: this.quesIn.value,
                 op1: this.op1In.value,
                 op2: this.op2In.value,
                 op3: this.op4In.value,
+                op4: ''
             }
         }
-        else if(this.op3In.value === '' && this.op4In.value === ''){
+        else if(this.op3In.value === undefined && this.op4In.value === undefined){
             var polls = {
                 name: this.nameIn.value,
                 ques: this.quesIn.value,
                 op1: this.op1In.value,
                 op2: this.op2In.value,
+                op3: '',
+                op4: ''
             }
         }
-        else if(this.op4In.value === ''){
+        else if(this.op4In.value === undefined){
             var polls = {
                 name: this.nameIn.value,
                 ques: this.quesIn.value,
                 op1: this.op1In.value,
                 op2: this.op2In.value,
                 op3: this.op3In.value,
+                op4: ''
             }
         }
         else{
